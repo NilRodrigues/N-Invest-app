@@ -58,43 +58,7 @@
       </div>
     </header>
 
-    <!-- RESUMO -->
-    <section class="bar-wrap">
-      <div class="stats-cards">
-
-        <div class="stat-card stat-card--income">
-          <div class="stat-icon"><i class="fas fa-arrow-up"></i></div>
-          <div class="stat-content">
-            <span class="stat-label">Entradas</span>
-            <span class="stat-value" id="labelIncome">R$ 0,00</span>
-          </div>
-        </div>
-
-        <div class="stat-card stat-card--expense">
-          <div class="stat-icon"><i class="fas fa-arrow-down"></i></div>
-          <div class="stat-content">
-            <span class="stat-label">Saídas</span>
-            <span class="stat-value" id="labelExpense">R$ 0,00</span>
-          </div>
-        </div>
-
-        <div class="stat-card stat-card--balance">
-          <div class="stat-icon"><i class="fas fa-balance-scale"></i></div>
-          <div class="stat-content">
-            <span class="stat-label">Saldo</span>
-            <span class="stat-value" id="labelBalance">R$ 0,00</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="cashbar">
-        <div class="cashbar-income" id="barIncome"></div>
-        <div class="cashbar-expense" id="barExpense"></div>
-      </div>
-    </section>
-
-    <!-- CONTROLES -->
+        <!-- CONTROLES -->
     <section class="controls card">
       <form id="txForm" class="form" novalidate>
         <input type="hidden" id="type" value="income">
@@ -103,16 +67,7 @@
           <h2><i class="fas fa-plus-circle"></i> Nova Transação</h2>
         </div>
 
-        <div class="controls-row">
-          <div class="segmented">
-            <button type="button" class="seg-btn is-active" data-type="income">
-              <i class="fas fa-arrow-up"></i> Entrada
-            </button>
-            <button type="button" class="seg-btn" data-type="expense">
-              <i class="fas fa-arrow-down"></i> Despesa
-            </button>
-          </div>
-        </div>
+       
 
         <div class="controls-row controls-row--inputs">
 
@@ -123,6 +78,17 @@
               <input id="amount" inputmode="decimal" required>
             </div>
           </div>
+
+           <div class="controls-row">
+          <div class="segmented">
+            <button type="button" class="seg-btn is-active" data-type="income">
+              <i class="fas fa-arrow-up"></i> Entrada
+            </button>
+            <button type="button" class="seg-btn" data-type="expense">
+              <i class="fas fa-arrow-down"></i> Despesa
+            </button>
+          </div>
+        </div>
 
           <div class="input-group">
             <label for="category" class="input-label">Categoria</label>
@@ -171,6 +137,44 @@
 
         <p id="formError" class="error"></p>
       </form>
+
+
+    <!-- RESUMO -->
+    <section class="bar-wrap">
+      <div class="stats-cards">
+
+        <div class="stat-card stat-card--income">
+          <div class="stat-icon"><i class="fas fa-arrow-up"></i></div>
+          <div class="stat-content">
+            <span class="stat-label">Entradas</span>
+            <span class="stat-value" id="labelIncome">R$ 0,00</span>
+          </div>
+        </div>
+
+        <div class="stat-card stat-card--expense">
+          <div class="stat-icon"><i class="fas fa-arrow-down"></i></div>
+          <div class="stat-content">
+            <span class="stat-label">Saídas</span>
+            <span class="stat-value" id="labelExpense">R$ 0,00</span>
+          </div>
+        </div>
+
+        <div class="stat-card stat-card--balance">
+          <div class="stat-icon"><i class="fas fa-balance-scale"></i></div>
+          <div class="stat-content">
+            <span class="stat-label">Saldo</span>
+            <span class="stat-value" id="labelBalance">R$ 0,00</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cashbar">
+        <div class="cashbar-income" id="barIncome"></div>
+        <div class="cashbar-expense" id="barExpense"></div>
+      </div>
+    </section>
+
 
       <!-- FILTROS -->
       <div class="filters">
