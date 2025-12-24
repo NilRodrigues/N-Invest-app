@@ -309,8 +309,8 @@ function updateBarTooltips(availablePct, spentPct, balance, expense) {
   barIncome.removeAttribute("title");
   barExpense.removeAttribute("title");
 
-  barIncome.title = `Disponível: ${fmtBRL(balance)} (${availablePct.toFixed(1)}% das entradas)`;
-  barExpense.title = `Gasto: ${fmtBRL(expense)} (${spentPct.toFixed(1)}% das entradas)`;
+  barIncome.title = `Entradas: ${fmtBRL(balance)} (${availablePct.toFixed(1)}% das entradas)`;
+  barExpense.title = `Saídas: ${fmtBRL(expense)} (${spentPct.toFixed(1)}% das entradas)`;
 
   barIncome.setAttribute("data-percent", availablePct > 0 ? `${availablePct.toFixed(1)}% disponível` : "");
   barExpense.setAttribute("data-percent", spentPct > 0 ? `${spentPct.toFixed(1)}% gasto` : "");
